@@ -21,7 +21,7 @@ def login_wechat():
 
 
 def send_msg():
-    if None == bot:
+    if bot is None:
         login_wechat()
 
     my_friend = bot.friends().serach(u'弟弟')[0]
