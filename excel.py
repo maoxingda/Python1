@@ -1,4 +1,5 @@
 import xlrd
+import openpyxl
 
 workbook = xlrd.open_workbook('persons.xlsx')
 
@@ -11,7 +12,7 @@ r, c = 0, 0
 
 while r < rows:
     while c < cols:
-        print(sheet1.cell_value(r, c), end=' ')
+        print(sheet1.cell_value(r, c), end = ' ')
         c += 1
     c = 0
     r += 1
