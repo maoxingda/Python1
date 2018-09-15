@@ -46,14 +46,14 @@ def createdb():
 
         # phoneNubmer
         c = 0
-        pNumber = '1'
+        p_number = '1'
         while c < 10:
             c += 1
-            pNumber += str(random.randint(0, 9))
+            p_number += str(random.randint(0, 9))
 
         cursor.execute('insert into tbl1 '
                        '(name, sex, pNumber) values'
-                       '("%s", "%s", "%s");' % (name, sex, pNumber))
+                       '("%s", "%s", "%s");' % (name, sex, p_number))
 
         db1.commit()
 
