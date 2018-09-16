@@ -26,7 +26,6 @@ if __name__ == '__main__':
     for thrd in thrds:
         thrd.setDaemon(True)
         thrd.start()
-
-    thrd.join()
+        thrd.join()
 
     print(u'all over %s.' % ctime())
