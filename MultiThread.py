@@ -10,7 +10,7 @@ def music(sname):
 
 def movie(mname):
     for i in range(2):
-        print(u'I was at the %s. %s\n' % (mname, ctime()))
+        print(u'I was at the %s. %s' % (mname, ctime()))
         sleep(5)
 
 
