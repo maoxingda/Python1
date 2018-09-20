@@ -3,6 +3,7 @@ from time import ctime, sleep
 
 
 def music(sname):
+    print(threading.stack_size())
     for i in range(2):
         print(u'I was listening to %s. %s' % (sname, ctime()))
         sleep(1)
@@ -11,7 +12,7 @@ def music(sname):
 def movie(mname):
     for i in range(2):
         print(u'I was at the %s. %s' % (mname, ctime()))
-        sleep(5)
+        sleep(1)
 
 
 if __name__ == '__main__':
