@@ -3,7 +3,6 @@ from time import ctime, sleep
 
 
 def music(sname):
-    print(threading.stack_size())
     for i in range(2):
         print(u'I was listening to %s. %s' % (sname, ctime()))
         sleep(1)
@@ -27,6 +26,8 @@ if __name__ == '__main__':
     for thrd in thrds:
         thrd.setDaemon(True)
         thrd.start()
+
+    for thrd in thrds:
         thrd.join()
 
     print(u'all over %s.' % ctime())
