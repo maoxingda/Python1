@@ -10,5 +10,4 @@ def func_timer():
 
 if __name__ == '__main__':
     timer = threading.Timer(3, func_timer)
-    threading.Thread().daemon
     timer.start()
