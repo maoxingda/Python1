@@ -31,10 +31,10 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
             self.wfile.write('{"code":"unreachable"}'.encode(encoding = "utf-8"))
 
 
-# Handler = http.server.SimpleHTTPRequestHandler
-Handler = MyHandler
+Handler = http.server.SimpleHTTPRequestHandler
+# Handler = MyHandler
 
 if __name__ == '__main__':
-    with socketserver.TCPServer(("127.0.0.1", PORT), Handler) as httpd:
+    with socketserver.TCPServer(("", PORT), Handler) as httpd:
         print("serving at port", PORT)
         httpd.serve_forever()
